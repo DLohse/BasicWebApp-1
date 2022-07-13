@@ -30,4 +30,12 @@ class QueryProcessorTest {
 		}
 	}
 
+	@Test
+	public void addition() throws Exception {
+		String actual = queryProcessor.process("what is 5 plus 4");
+		if (!actual.contains("9")) {
+			fail("addition.");
+		}
+	}
+
 }
